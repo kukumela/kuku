@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebCrafters - Professional Web Solutions for Modern Businesses. We offer custom web development, e-commerce solutions, SEO, and digital marketing services.">
+    <!-- Favicon for better search appearance and user experience -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>WebCrafters - Home | Professional Web Development Services</title>
+
+    <!-- Schema.org Organization Markup (for sitewide organization info) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "WebCrafters",
+          "url": "https://www.webcrafters-example.com", <!-- Replace with your actual URL -->
+          "logo": "https://www.webcrafters-example.com/logo.png", <!-- Replace with your actual logo URL -->
+          "description": "Professional web development and digital marketing agency crafting bespoke online solutions for modern businesses.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Web Development Street",
+            "addressLocality": "Tech City",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-555-123-4567",
+            "contactType": "customer service",
+            "areaServed": "US, CA, GB",
+            "availableLanguage": ["en"]
+          },
+          "sameAs": [
+            "https://www.facebook.com/WebCraftersExample", <!-- Replace with your actual Facebook URL -->
+            "https://twitter.com/WebCraftersExample",    <!-- Replace with your actual Twitter URL -->
+            "https://www.linkedin.com/company/webcraftersexample" <!-- Replace with your actual LinkedIn URL -->
+          ]
+        }
+    </script>
+
+    <style>
+        /* ==========================================================
+           ... (Keep your existing CSS styles here - already well-structured) ...
+           Consider these color adjustments for better accessibility and aesthetics:
+
+           Primary Blue: #007bff (already good, consider slightly darker for better contrast if needed, e.g., #0069d9)
+           Secondary Dark Gray: #333 (good for headers and footers, ensure good contrast with white text)
+           Body Text Gray: #555 (good, ensure good contrast with white/light backgrounds)
+           Light Gray Backgrounds: #f9f9f9, #f8f9fa, #e9ecef, #f4f4f4 (these are good, light and clean)
+           Green CTA Button: #28a745 (good for positive actions)
+
+           Ensure sufficient contrast ratio (at least 4.5:1 for normal text, 3:1 for large text) for text against backgrounds.
+           Use color contrast checker tools online to verify if needed.
+           Consider using a consistent color palette throughout the website for a professional look.
+           ========================================================== */
+        /* ... (Your CSS from previous response) ... */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #555; /* Adjusted body text color for better readability */
+            background-color: #f9f9f9;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: #333; /* Adjusted heading color for better contrast */
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.4rem; }
+        h3 { font-size: 1.8rem; }
+        h4 { font-size: 1.4rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 0.9rem; }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #555;
+            font-weight: 400;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        em {
+            font-style: italic;
+            color: #666;
+        }
+
+        blockquote {
+            border-left: 5px solid #ccc;
+            padding-left: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #777;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-item {
+            padding: 2.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li {
+            margin-left: 2.5rem;
+        }
+
+        .main-nav li:first-child {
+            margin-left: 0;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            background-color: #555;
+            color: #eee;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 0.8rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu-toggle:hover {
+            color: #ddd;
+        }
+
+        .breadcrumb {
+            background-color: #f4f4f4;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .breadcrumb ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb li {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breadcrumb li:not(:first-child)::before {
+            content: "/";
+            color: #777;
+            margin-right: 1rem;
+        }
+
+        .breadcrumb a {
+            color: #777;
+            transition: color 0.3s ease;
+        }
+
+        .breadcrumb a:hover {
+            color: #333;
+        }
+
+        .breadcrumb .current-page {
+            color: #333;
+            font-weight: 500;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 8rem 0;
+            text-align: center;
+            margin-bottom: 4rem;
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            color: #eee;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .hero-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .about-intro-section {
+            padding: 6rem 0;
+            text-align: center;
+            background-color: #fff;
+            margin-bottom: 4rem;
+        }
+
+        .about-intro-section h2 {
+            margin-bottom: 2.5rem;
+            color: #333;
+        }
+
+        .about-intro-section p {
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .about-intro-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        .services-section {
+            padding: 6rem 0;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin-bottom: 4rem;
+        }
+
+        .services-section h2 {
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #007bff;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1.2rem;
+            color: #333;
+            font-size: 1.6rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .service-card ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-card li {
+            margin-bottom: 0.7rem;
+            color: #777;
+        }
+
+        .products-section {
+            padding: 6rem 0;
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .products-section h2 {
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .product-card {
+            background-color: #f8f9fa;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: left;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card h3 {
+            margin-bottom: 1.2rem;
+            color: #333;
+            font-size: 1.6rem;
+        }
+
+        .product-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .product-card ul {
+            list-style-type: square;
+            padding-left: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .product-card li {
+            margin-bottom: 0.7rem;
+            color: #777;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-button:hover {
+            background-color: #218838;
+            transform: scale(1.03);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-section {
+            padding: 6rem 0;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .portfolio-section h2 {
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .portfolio-image-container {
+            overflow: hidden;
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.1);
+        }
+
+        .portfolio-details {
+            padding: 2.5rem;
+            text-align: left;
+        }
+
+        .portfolio-details h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .portfolio-details p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .portfolio-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: #007bff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .portfolio-link:hover {
+            color: #0056b3;
+        }
+
+        .team-section {
+            padding: 6rem 0;
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .team-section h2 {
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        .team-member {
+            background-color: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .team-member h4 {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        .team-member p {
+            color: #666;
+        }
+
+        .faq-section {
+            padding: 6rem 0;
+            background-color: #f9f9f9;
+            margin-bottom: 4rem;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 2rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 1.5rem;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #555;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            content: '-';
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
+            padding-bottom: 0;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding-bottom: 1.5rem;
+        }
+
+        .clients-section {
+            padding: 4rem 0;
+            background-color: #fff;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .clients-section h2 {
+            margin-bottom: 2.5rem;
+            color: #333;
+        }
+
+        .client-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .client-logo {
+            max-width: 150px;
+            max-height: 80px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .cta-section {
+            padding: 8rem 0;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            background-image: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #eee;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-action-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background-color: white;
+            color: #007bff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-action-button:hover {
+            background-color: #eee;
+            color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 6rem 0;
+            margin-top: 6rem;
+            border-top: 3px solid #555;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+        }
+
+        .footer-section {
+            margin-bottom: 0;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #555;
+            padding-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: #ddd;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-navigation ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-contact-details p,
+        .footer-contact-details a {
+            color: #ddd;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact-details a:hover {
+            color: white;
+        }
+
+        .footer-social-links ul {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .footer-social-links li {
+            margin-right: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .footer-social-links li:last-child {
+            margin-right: 0;
+        }
+
+        .footer-social-links a {
+            font-size: 1.5rem;
+            color: #ddd;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .footer-social-links a:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-newsletter form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-newsletter label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .footer-newsletter input[type="email"] {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            max-width: 300px;
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-newsletter button[type="submit"] {
+            padding: 0.8rem 1.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-newsletter button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #aaa;
+            padding-top: 2rem;
+            border-top: 1px solid #555;
+        }
+
+        .copyright a {
+            color: #aaa;
+        }
+
+        .copyright a:hover {
+            color: #ddd;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #333;
+                width: 100%;
+                text-align: center;
+                padding: 2rem 0;
+                z-index: 10;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .main-nav.active ul {
+                display: flex;
+            }
+
+            .main-nav li {
+                margin-left: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero-section {
+                padding: 6rem 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-section p {
+                font-size: 1.1rem;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+
+            .footer-navigation ul,
+            .footer-social-links ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-social-links li {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .footer-newsletter form {
+                align-items: center;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            html {
+                font-size: 15.5px;
+            }
+
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-section h1 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (min-width: 1025px) {}
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .mb-0 { margin-bottom: 0; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+        .mb-4 { margin-bottom: 4rem; }
+        .mt-0 { margin-top: 0; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+        .mt-4 { margin-top: 4rem; }
+        .py-1 { padding-top: 1rem; padding-bottom: 1rem; }
+        .py-2 { padding-top: 2rem; padding-bottom: 2rem; }
+        .py-3 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-4 { padding-top: 4rem; padding-bottom: 4rem; }
+        .px-1 { padding-left: 1rem; padding-right: 1rem; }
+        .px-2 { padding-left: 2rem; padding-right: 2rem; }
+        .px-3 { padding-left: 3rem; padding-right: 3rem; }
+        .px-4 { padding-left: 4rem; padding-right: 4rem; }
+        .uppercase { text-transform: uppercase; }
+        .bold { font-weight: bold; }
+        .italic { font-style: italic; }
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0,0,0,0) !important;
+            -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Toggle Mobile Navigation">☰</button>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="main-nav">
+                <div>
+                    <!-- Logo Placeholder - You can replace with an image or text logo -->
+                    <a href="index.html" class="logo">WebCrafters</a>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current-page">Products</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content container">
+                <h1>Crafting Digital Experiences That Matter</h1>
+                <p>We are WebCrafters, a team of passionate web developers, designers, and digital strategists dedicated to building exceptional online solutions for businesses of all sizes. Let us help you transform your digital presence and achieve your business goals.</p>
+                <a href="#services" class="hero-button">Discover Our Services</a>
+            </div>
+        </section>
+
+        <!-- About Us Intro Section -->
+        <section class="about-intro-section section-padding">
+            <div class="container">
+                <h2>About WebCrafters - Your Digital Partner</h2>
+                <p>Since our inception in 2010, WebCrafters has been at the forefront of web innovation, helping businesses navigate the ever-evolving digital landscape. We pride ourselves on our commitment to quality, creativity, and client satisfaction. Our team of experts brings together diverse skills and experiences to deliver tailored solutions that are not only visually stunning but also strategically effective.</p>
+                <p>We believe in building long-term relationships with our clients, understanding their unique needs, and providing ongoing support to ensure their continued success. From startups to large enterprises, we've empowered countless businesses to thrive online. Let us be your partner in crafting a digital future that exceeds your expectations.</p>
+                <img src="about-us-image.jpg" alt="WebCrafters Team Collaboration" class="about-intro-image" onerror="this.src='https://via.placeholder.com/1200x600?text=About+Us+Image'">
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <h2>Our Comprehensive Web Services</h2>
+                <div class="grid-container">
+                    <!-- Web Design & Development Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">🌐</i>
+                        <h3 itemprop="name">Web Design & Development</h3>
+                        <p itemprop="description">We specialize in creating bespoke websites that are not only visually appealing but also highly functional and user-friendly. Our development process is rooted in best practices, ensuring responsive design, fast loading times, and seamless user experiences across all devices.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>Custom Website Design:</strong> Tailored designs that reflect your brand identity and resonate with your target audience.</li>
+                            <li itemprop="serviceType"><strong>Responsive Web Development:</strong> Websites that adapt flawlessly to desktops, tablets, and smartphones.</li>
+                            <li itemprop="serviceType"><strong>Front-End & Back-End Development:</strong> Expertise in the latest technologies for robust and scalable web solutions.</li>
+                            <li itemprop="serviceType"><strong>Website Redesign & Maintenance:</strong> Revitalize your existing website or ensure its ongoing performance and security.</li>
+                            <li itemprop="serviceType"><strong>UI/UX Consulting:</strong> Enhance user engagement and satisfaction through intuitive and effective interface and experience design.</li>
+                            <li itemprop="serviceType"><strong>E-commerce Integration:</strong> Seamlessly integrate e-commerce functionalities to start selling online.</li>
+                            <li itemprop="serviceType"><strong>Content Migration:</strong> Hassle-free migration of content from your old platform to your new website.</li>
+                            <li itemprop="serviceType"><strong>API Integration:</strong> Connect your website with third-party services and applications.</li>
+                            <li itemprop="serviceType"><strong>Website Security Audits:</strong> Protect your website from threats with comprehensive security assessments.</li>
+                            <li itemprop="serviceType"><strong>Performance Optimization:</strong> Improve website speed and efficiency for better user experience and SEO.</li>
+                        </ul>
+                        <a href="#web-design-details" class="cta-button">Learn More about Web Design</a>
+                    </div>
+                    <!-- E-Commerce Solutions Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">🛒</i>
+                        <h3 itemprop="name">E-Commerce Solutions</h3>
+                        <p itemprop="description">Maximize your online sales potential with our comprehensive e-commerce solutions. We build secure, scalable, and feature-rich online stores that provide a seamless shopping experience for your customers. From platform selection to payment gateway integration, we handle every aspect of your e-commerce setup.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>E-Commerce Website Development:</strong> Custom online store development on platforms like Shopify, WooCommerce, Magento, and more.</li>
+                            <li itemprop="serviceType"><strong>Shopping Cart Integration:</strong> User-friendly and secure shopping cart systems to streamline the purchasing process.</li>
+                            <li itemprop="serviceType"><strong>Payment Gateway Setup:</strong> Integration with leading payment gateways for secure and reliable transactions.</li>
+                            <li itemprop="serviceType"><strong>Product Catalog Management:</strong> Efficient systems for managing and showcasing your products online.</li>
+                            <li itemprop="serviceType"><strong>Inventory Management Systems:</strong> Real-time inventory tracking to prevent overselling and manage stock levels effectively.</li>
+                            <li itemprop="serviceType"><strong>Order Processing & Fulfillment:</strong> Streamlined order management and fulfillment workflows.</li>
+                            <li itemprop="serviceType"><strong>Customer Account Management:</strong> Robust customer account features to enhance loyalty and repeat purchases.</li>
+                            <li itemprop="serviceType"><strong>Promotional & Discount Tools:</strong> Implement effective promotional strategies and discount campaigns.</li>
+                            <li itemprop="serviceType"><strong>Shipping & Tax Configuration:</strong> Accurate and automated shipping and tax calculations.</li>
+                            <li itemprop="serviceType"><strong>E-commerce SEO:</strong> Optimize your online store for search engines to attract more organic traffic.</li>
+                        </ul>
+                        <a href="#ecommerce-details" class="cta-button">Explore E-Commerce Solutions</a>
+                    </div>
+                    <!-- Digital Marketing & SEO Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">🚀</i>
+                        <h3 itemprop="name">Digital Marketing & SEO</h3>
+                        <p itemprop="description">Increase your online visibility and drive targeted traffic to your website with our result-driven digital marketing and SEO services. We craft strategies that enhance your search engine rankings, engage your audience on social media, and convert visitors into loyal customers.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>Search Engine Optimization (SEO):</strong> Comprehensive SEO strategies including keyword research, on-page optimization, and link building.</li>
+                            <li itemprop="serviceType"><strong>Pay-Per-Click (PPC) Advertising:</strong> Targeted ad campaigns on platforms like Google Ads to drive immediate traffic and conversions.</li>
+                            <li itemprop="serviceType"><strong>Social Media Marketing (SMM):</strong> Engaging content and strategic campaigns across social media platforms to build brand awareness and customer engagement.</li>
+                            <li itemprop="serviceType"><strong>Content Marketing Strategy:</strong> Creation of valuable and relevant content to attract and retain a defined audience.</li>
+                            <li itemprop="serviceType"><strong>Email Marketing Campaigns:</strong> Effective email marketing strategies to nurture leads and promote your products or services.</li>
+                            <li itemprop="serviceType"><strong>Local SEO Optimization:</strong> Enhance your local online presence to attract nearby customers.</li>
+                            <li itemprop="serviceType"><strong>SEO Audits & Analysis:</strong> Detailed website SEO audits to identify areas for improvement.</li>
+                            <li itemprop="serviceType"><strong>Conversion Rate Optimization (CRO):</strong> Improve your website's conversion rates to maximize ROI.</li>
+                            <li itemprop="serviceType"><strong>Analytics & Performance Tracking:</strong> Monitor and analyze your digital marketing performance with detailed reports.</li>
+                            <li itemprop="serviceType"><strong>Reputation Management:</strong> Protect and enhance your online reputation through proactive management strategies.</li>
+                        </ul>
+                        <a href="#digital-marketing-details" class="cta-button">Boost Your Digital Presence</a>
+                    </div>
+                    <!-- Mobile App Development Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">📱</i>
+                        <h3 itemprop="name">Mobile App Development</h3>
+                        <p itemprop="description">Expand your reach and engage your customers on the go with our custom mobile app development services. We create native and cross-platform apps for iOS and Android, focusing on user experience, functionality, and performance.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>iOS App Development (Swift):</strong> Native iOS app development using Swift for optimal performance and user experience.</li>
+                            <li itemprop="serviceType"><strong>Android App Development (Kotlin/Java):</strong> Native Android app development using Kotlin and Java for robust and scalable apps.</li>
+                            <li itemprop="serviceType"><strong>Cross-Platform App Development (React Native):</strong> Cost-effective cross-platform app development using React Native for iOS and Android.</li>
+                            <li itemprop="serviceType"><strong>Mobile UI/UX Design:</strong> Intuitive and engaging mobile interface and experience design.</li>
+                            <li itemprop="serviceType"><strong>App Store Submission & Support:</strong> Guidance and support throughout the app submission process and beyond.</li>
+                            <li itemprop="serviceType"><strong>Custom Mobile App Solutions:</strong> Tailored app development to meet your specific business requirements.</li>
+                            <li itemprop="serviceType"><strong>Mobile App Testing & QA:</strong> Rigorous testing and quality assurance to ensure app stability and functionality.</li>
+                            <li itemprop="serviceType"><strong>App Maintenance & Updates:</strong> Ongoing maintenance and updates to keep your app current and performing optimally.</li>
+                            <li itemprop="serviceType"><strong>Push Notification Integration:</strong> Enhance user engagement with push notification capabilities.</li>
+                            <li itemprop="serviceType"><strong>Location-Based Services:</strong> Integration of location-based features for enhanced app functionality.</li>
+                        </ul>
+                        <a href="#mobile-app-details" class="cta-button">Discover Mobile App Solutions</a>
+                    </div>
+                    <!-- CMS & Platform Integration Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">⚙️</i>
+                        <h3 itemprop="name">CMS & Platform Integration</h3>
+                        <p itemprop="description">Empower yourself with control over your website content and functionality through our CMS and platform integration services. We specialize in popular CMS platforms like WordPress, Drupal, and Joomla, providing customization, development, and integration to suit your needs.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>WordPress Development & Customization:</strong> Custom WordPress theme and plugin development, site setup, and configuration.</li>
+                            <li itemprop="serviceType"><strong>Drupal Development & Theming:</strong> Robust Drupal development, custom module creation, and theme implementation.</li>
+                            <li itemprop="serviceType"><strong>Joomla Development:</strong> Joomla website development, extension customization, and site management.</li>
+                            <li itemprop="serviceType"><strong>CMS Migration & Upgrades:</strong> Seamless migration to a new CMS or upgrades to the latest version.</li>
+                            <li itemprop="serviceType"><strong>Custom Plugin & Module Development:</strong> Development of custom plugins and modules to extend CMS functionality.</li>
+                            <li itemprop="serviceType"><strong>API Integrations with CMS:</strong> Connect your CMS with other platforms and services via APIs.</li>
+                            <li itemprop="serviceType"><strong>CMS Security Hardening:</strong> Enhance the security of your CMS platform to protect against vulnerabilities.</li>
+                            <li itemprop="serviceType"><strong>Content Strategy & Management Consulting:</strong> Guidance on content strategy and effective content management practices.</li>
+                            <li itemprop="serviceType"><strong>Training & Support for CMS:</strong> Comprehensive training and ongoing support for managing your CMS website.</li>
+                            <li itemprop="serviceType"><strong>Performance Tuning for CMS:</strong> Optimize CMS performance for faster loading times and better user experience.</li>
+                        </ul>
+                        <a href="#cms-integration-details" class="cta-button">Explore CMS Integrations</a>
+                    </div>
+                    <!-- Web Analytics & Reporting Service -->
+                    <div class="grid-item service-card" itemscope itemtype="https://schema.org/Service">
+                        <i class="service-icon">📊</i>
+                        <h3 itemprop="name">Web Analytics & Reporting</h3>
+                        <p itemprop="description">Gain valuable insights into your website's performance and user behavior with our web analytics and reporting services. We help you set up tracking, analyze data, and generate actionable reports to inform your online strategy and improve your ROI.</p>
+                        <ul itemprop="provider" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Provider Name -->
+                            <li itemprop="serviceType"><strong>Google Analytics Setup & Configuration:</strong> Proper setup and configuration of Google Analytics to track key website metrics.</li>
+                            <li itemprop="serviceType"><strong>Custom Dashboard Creation:</strong> Tailored dashboards to visualize your most important data at a glance.</li>
+                            <li itemprop="serviceType"><strong>Performance Reporting & Analysis:</strong> Regular reports and in-depth analysis of website performance metrics.</li>
+                            <li itemprop="serviceType"><strong>Conversion Tracking:</strong> Setup and analysis of conversion tracking to measure the effectiveness of your marketing efforts.</li>
+                            <li itemprop="serviceType"><strong>A/B Testing & Optimization:</strong> Implement and analyze A/B tests to optimize website elements for better performance.</li>
+                            <li itemprop="serviceType"><strong>User Behavior Analysis:</strong> Understanding how users interact with your website through heatmaps, session recordings, etc.</li>
+                            <li itemprop="serviceType"><strong>SEO Performance Tracking:</strong> Monitor your website's SEO performance and identify areas for improvement.</li>
+                            <li itemprop="serviceType"><strong>E-commerce Analytics:</strong> Detailed e-commerce analytics to track sales, customer behavior, and product performance.</li>
+                            <li itemprop="serviceType"><strong>Custom Analytics Solutions:</strong> Tailored analytics setups and reporting solutions to meet specific business needs.</li>
+                            <li itemprop="serviceType"><strong>Data-Driven Recommendations:</strong> Actionable recommendations based on data analysis to improve website performance and ROI.</li>
+                        </ul>
+                        <a href="#web-analytics-details" class="cta-button">Improve with Web Analytics</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section section-padding">
+            <div class="container">
+                <h2>Our Innovative Web Products</h2>
+                <p>Discover our range of web products designed to enhance your online presence, streamline operations, and drive growth. From e-commerce platforms to SEO tools, we offer solutions tailored to meet your diverse business needs.</p>
+                <div class="grid-container">
+                    <!-- ShopSphere Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-ecommerce.jpg" alt="E-Commerce Platform - ShopSphere" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=ShopSphere'">
+                        <h3 itemprop="name">E-Commerce Platform - "ShopSphere"</h3>
+                        <p itemprop="description">ShopSphere is a cutting-edge e-commerce platform designed for businesses of all sizes looking to establish or expand their online retail presence. It offers a comprehensive suite of features to manage products, process orders, handle payments, and provide an exceptional shopping experience.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Unlimited Product Listings:</strong> Showcase your entire product catalog without limitations.</li>
+                            <li><strong>Secure SSL Encryption:</strong> Ensure secure transactions and customer data protection.</li>
+                            <li><strong>Multiple Payment Options:</strong> Support for various payment gateways including credit cards, PayPal, and more.</li>
+                            <li><strong>Customer Account Management:</strong> Allow customers to create accounts, track orders, and manage profiles.</li>
+                            <li><strong>Detailed Sales Reports:</strong> Access comprehensive sales reports to analyze performance and trends.</li>
+                            <li><strong>Inventory Management:</strong> Real-time inventory tracking and management to avoid overselling.</li>
+                            <li><strong>Marketing Tools:</strong> Built-in tools for promotions, discounts, and email marketing.</li>
+                            <li><strong>Mobile-Responsive Design:</strong> Platform optimized for seamless shopping on all devices.</li>
+                            <li><strong>Scalable Infrastructure:</strong> Platform built to handle growth and increased traffic.</li>
+                            <li><strong>Dedicated Support:</strong> Access to our expert support team for any assistance you may need.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#shopSphereDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="99.00">99.00</span>/month <!-- Example Pricing -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#shopSphereDetails" class="cta-button">View ShopSphere Details</a>
+                    </div>
+                    <!-- ContentCraft Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-cms.jpg" alt="Content Management System - ContentCraft" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=ContentCraft'">
+                        <h3 itemprop="name">CMS - "ContentCraft"</h3>
+                        <p itemprop="description">ContentCraft is an intuitive and powerful content management system that gives you complete control over your website content. With its user-friendly interface and robust features, managing and updating your website has never been easier.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Drag-and-Drop Interface:</strong> Easily create and manage pages with a visual drag-and-drop editor.</li>
+                            <li><strong>User-Friendly Editor:</strong> WYSIWYG editor for creating and formatting content without coding skills.</li>
+                            <li><strong>SEO Optimization Tools:</strong> Built-in tools to optimize your content for search engines.</li>
+                            <li><strong>Version Control:</strong> Track changes and revert to previous versions of your content.</li>
+                            <li><strong>Multi-User Access:</strong> Manage user roles and permissions for team collaboration.</li>
+                            <li><strong>Customizable Templates:</strong> Choose from a range of customizable templates to design your website.</li>
+                            <li><strong>Responsive Design:</strong> CMS ensures your website is responsive across all devices.</li>
+                            <li><strong>Plugin & Extension Support:</strong> Extend functionality with a wide range of plugins and extensions.</li>
+                            <li><strong>Content Scheduling:</strong> Schedule content publishing in advance for effective content planning.</li>
+                            <li><strong>Regular Updates & Security:</strong> Benefit from regular updates and security patches to keep your site safe.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#contentCraftDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="49.00">49.00</span>/month <!-- Example Pricing -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#contentCraftDetails" class="cta-button">Explore ContentCraft CMS</a>
+                    </div>
+                    <!-- TaskFlow Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-webapp.jpg" alt="Web Application - TaskFlow" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=TaskFlow'">
+                        <h3 itemprop="name">Web Application - "TaskFlow"</h3>
+                        <p itemprop="description">TaskFlow is a web-based project management application designed to streamline team collaboration and project execution. It provides a centralized platform to organize tasks, track progress, communicate, and manage resources effectively.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Task Assignment & Tracking:</strong> Assign tasks to team members and track their progress in real-time.</li>
+                            <li><strong>Progress Visualization:</strong> Visual dashboards and charts to monitor project progress and deadlines.</li>
+                            <li><strong>Team Communication Tools:</strong> Integrated communication tools for team discussions and updates.</li>
+                            <li><strong>File Sharing:</strong> Secure file sharing and collaboration within projects.</li>
+                            <li><strong>Calendar Integration:</strong> Integrate with calendars to manage schedules and deadlines.</li>
+                            <li><strong>Project Templates:</strong> Pre-built project templates to quickly start new projects.</li>
+                            <li><strong>Customizable Workflows:</strong> Customize workflows to match your team's processes.</li>
+                            <li><strong>Notifications & Alerts:</strong> Real-time notifications for task updates and project milestones.</li>
+                            <li><strong>Reporting & Analytics:</strong> Generate reports on project performance and team productivity.</li>
+                            <li><strong>Secure Access Control:</strong> Manage user access and permissions to protect project data.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#taskFlowDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="29.00">29.00</span>/month <!-- Example Pricing -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#taskFlowDetails" class="cta-button">Learn About TaskFlow App</a>
+                    </div>
+                    <!-- RankBoost Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-seo.jpg" alt="SEO Tool - RankBoost" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=RankBoost'">
+                        <h3 itemprop="name">SEO Tool - "RankBoost"</h3>
+                        <p itemprop="description">RankBoost is a powerful SEO analysis and optimization tool designed to help you improve your website's search engine rankings and drive more organic traffic. It offers comprehensive features for keyword research, competitor analysis, rank tracking, and on-page optimization.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Keyword Research:</strong> Discover high-potential keywords for your niche and target audience.</li>
+                            <li><strong>Competitor Analysis:</strong> Analyze your competitors' SEO strategies and identify opportunities.</li>
+                            <li><strong>Rank Tracking:</strong> Monitor your website's keyword rankings across major search engines.</li>
+                            <li><strong>On-Page Optimization Suggestions:</strong> Receive actionable recommendations to optimize your website's on-page SEO.</li>
+                            <li><strong>SEO Reporting:</strong> Generate detailed SEO reports to track progress and measure results.</li>
+                            <li><strong>Backlink Analysis:</strong> Analyze your website's backlink profile and identify link building opportunities.</li>
+                            <li><strong>Site Audit:</strong> Comprehensive website audit to identify SEO issues and areas for improvement.</li>
+                            <li><strong>Content Optimization:</strong> Optimize your content for target keywords and improve search visibility.</li>
+                            <li><strong>Mobile SEO Analysis:</strong> Analyze your website's mobile SEO performance and identify mobile-specific issues.</li>
+                            <li><strong>User-Friendly Interface:</strong> Intuitive and easy-to-use interface for SEO beginners and experts alike.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#rankBoostDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="79.00">79.00</span>/month <!-- Example Pricing -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#rankBoostDetails" class="cta-button">Discover RankBoost SEO Tool</a>
+                    </div>
+                    <!-- AppStart Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-mobileapp.jpg" alt="Mobile App Template - AppStart" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=AppStart'">
+                        <h3 itemprop="name">Mobile App Template - "AppStart"</h3>
+                        <p itemprop="description">AppStart is a professionally designed mobile app template that provides a solid foundation for your mobile app project. It's built with React Native for cross-platform compatibility and features a wide range of ready-to-use UI components and screens, saving you time and resources in development.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Ready-to-Use UI Components:</strong> Collection of pre-designed UI components for various app functionalities.</li>
+                            <li><strong>Customizable Design:</strong> Easily customize the template to match your brand and app design.</li>
+                            <li><strong>Cross-Platform Compatibility (React Native):</strong> Built with React Native for iOS and Android compatibility.</li>
+                            <li><strong>Detailed Documentation:</strong> Comprehensive documentation to guide you through customization and setup.</li>
+                            <li><strong>Ongoing Updates & Support:</strong> Regular updates and support to ensure template compatibility and functionality.</li>
+                            <li><strong>Screen Templates:</strong> Wide range of screen templates for common app features like login, registration, profiles, etc.</li>
+                            <li><strong>Navigation Components:</strong> Pre-built navigation components for seamless app navigation.</li>
+                            <li><strong>Theming Support:</strong> Easily customizable themes to change the look and feel of your app.</li>
+                            <li><strong>Performance Optimized:</strong> Template built for optimal performance and smooth user experience.</li>
+                            <li><strong>Time & Cost Saving:</strong> Save significant time and development costs by starting with a pre-built template.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#appStartDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="199.00">199.00</span> <!-- Example Pricing - One-time purchase -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#appStartDetails" class="cta-button">Explore AppStart Template</a>
+                    </div>
+                    <!-- StrategyPro Product Card -->
+                    <div class="grid-item product-card" itemscope itemtype="https://schema.org/Product">
+                        <img itemprop="image" src="placeholder-consulting.jpg" alt="Web Consulting Package - StrategyPro" class="product-image" onerror="this.src='https://via.placeholder.com/350x200?text=StrategyPro'">
+                        <h3 itemprop="name">Web Consulting Package - "StrategyPro"</h3>
+                        <p itemprop="description">StrategyPro is our premium web consulting package designed to provide expert guidance and strategic planning for your web projects. Get personalized advice and actionable insights from our experienced web consultants to ensure your project's success.</p>
+                        <ul itemprop="brand" itemscope itemtype="https://schema.org/Organization">
+                            <meta itemprop="name" content="WebCrafters"> <!-- Brand Name -->
+                            <li><strong>Initial Consultation:</strong> In-depth initial consultation to understand your project goals and requirements.</li>
+                            <li><strong>Website Audit & Analysis:</strong> Comprehensive audit and analysis of your existing website (if applicable).</li>
+                            <li><strong>Strategic Planning:</strong> Development of a strategic web plan tailored to your business objectives.</li>
+                            <li><strong>Implementation Roadmap:</strong> Detailed roadmap for implementing your web project strategy.</li>
+                            <li><strong>Follow-Up Support:</strong> Ongoing follow-up support and guidance throughout your project implementation.</li>
+                            <li><strong>Expert Advice:</strong> Access to expert advice from our experienced web consultants.</li>
+                            <li><strong>Customized Solutions:</strong> Tailored consulting solutions to meet your specific needs and challenges.</li>
+                            <li><strong>Best Practices Guidance:</strong> Guidance on web development and digital marketing best practices.</li>
+                            <li><strong>Performance Measurement Framework:</strong> Framework for measuring the success and ROI of your web project.</li>
+                            <li><strong>Business Growth Focus:</strong> Consulting focused on driving business growth and achieving measurable results.</li>
+                        </ul>
+                        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                            <link itemprop="url" href="#strategyProDetails"/> <!-- URL to product details page -->
+                            <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="499.00">499.00</span> <!-- Example Pricing - One-time package price -->
+                            <link itemprop="availability" href="https://schema.org/InStock"/>In Stock
+                        </div>
+                        <a href="#strategyProDetails" class="cta-button">Get StrategyPro Consulting</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Case Studies Section -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <h2>Our Portfolio - Showcasing Our Expertise</h2>
+                <p>Explore a selection of our recent projects and case studies that highlight our expertise in web design, development, and digital marketing. See how we've helped businesses like yours achieve their online goals.</p>
+                <div class="grid-container">
+                    <!-- Portfolio Item 1 -->
+                    <div class="grid-item portfolio-item">
+                        <div class="portfolio-image-container">
+                            <img src="portfolio-project-1.jpg" alt="Project 1 - E-commerce Website Redesign" class="portfolio-image" onerror="this.src='https://via.placeholder.com/600x400?text=Project+1'">
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>E-commerce Website Redesign for Fashion Retailer</h3>
+                            <p>We redesigned the e-commerce website for a leading fashion retailer, focusing on improving user experience, mobile responsiveness, and conversion rates. The project resulted in a 40% increase in online sales and a 60% improvement in mobile user engagement.</p>
+                            <a href="#project1Details" class="portfolio-link">View Project Details</a>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2 -->
+                    <div class="grid-item portfolio-item">
+                        <div class="portfolio-image-container">
+                            <img src="portfolio-project-2.jpg" alt="Project 2 - Custom Web Application for Logistics" class="portfolio-image" onerror="this.src='https://via.placeholder.com/600x400?text=Project+2'">
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>Custom Web Application for Logistics Management</h3>
+                            <p>Developed a custom web application for a logistics company to streamline their operations, manage shipments, track deliveries, and improve communication between drivers and dispatchers. The application reduced operational costs by 25% and improved delivery efficiency by 30%.</p>
+                            <a href="#project2Details" class="portfolio-link">View Project Details</a>
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3 -->
+                    <div class="grid-item portfolio-item">
+                        <div class="portfolio-image-container">
+                            <img src="portfolio-project-3.jpg" alt="Project 3 - SEO Campaign for Local Business" class="portfolio-image" onerror="this.src='https://via.placeholder.com/600x400?text=Project+3'">
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>SEO Campaign for Local Restaurant Chain</h3>
+                            <p>Implemented a comprehensive SEO campaign for a local restaurant chain to improve their online visibility in local search results. Within six months, organic traffic to their website increased by 150%, and online reservations increased by 80%.</p>
+                            <a href="#project3Details" class="portfolio-link">View Project Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section section-padding">
+            <div class="container">
+                <h2>Meet Our Expert Team</h2>
+                <p>Our team is composed of talented and dedicated professionals with years of experience in web development, design, and digital marketing. We are passionate about crafting digital solutions that drive success for our clients.</p>
+                <div class="grid-container">
+                    <!-- Team Member 1 -->
+                    <div class="grid-item team-member">
+                        <img src="team-member-1.jpg" alt="John Doe - Lead Developer" class="team-member-image" onerror="this.src='https://via.placeholder.com/150x150?text=JD'">
+                        <h3>John Doe</h3>
+                        <h4>Lead Developer</h4>
+                        <p>John is our Lead Developer with over 10 years of experience in web development. He specializes in back-end technologies and architecting scalable web solutions. He's passionate about clean code and innovative solutions.</p>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div class="grid-item team-member">
+                        <img src="team-member-2.jpg" alt="Jane Smith - UI/UX Designer" class="team-member-image" onerror="this.src='https://via.placeholder.com/150x150?text=JS'">
+                        <h3>Jane Smith</h3>
+                        <h4>UI/UX Designer</h4>
+                        <p>Jane is our talented UI/UX Designer with a keen eye for aesthetics and usability. She focuses on creating user-centered designs that are both visually appealing and highly functional. She's a design thinking enthusiast.</p>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div class="grid-item team-member">
+                        <img src="team-member-3.jpg" alt="Peter Jones - Digital Marketing Strategist" class="team-member-image" onerror="this.src='https://via.placeholder.com/150x150?text=PJ'">
+                        <h3>Peter Jones</h3>
+                        <h4>Digital Marketing Strategist</h4>
+                        <p>Peter is our Digital Marketing Strategist with extensive experience in SEO, PPC, and social media marketing. He develops data-driven strategies to improve online visibility and drive business growth. He's an analytics guru.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section section-padding" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="container">
+                <h2 itemprop="mainEntityOfPage">Frequently Asked Questions</h2>
+                <p class="text-center mb-4">Have questions? We've got answers! Check out our FAQ section for common queries.</p>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFAQ(this)" itemprop="name">What types of websites do you develop?</div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">We develop a wide range of websites including e-commerce sites, corporate websites, blogs, portfolios, and custom web applications. Our team has the expertise to handle projects of any scale and complexity.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFAQ(this)" itemprop="name">How long does it take to develop a website?</div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The timeline for website development varies depending on the complexity and features required. A simple website might take a few weeks, while a complex e-commerce site or web application could take several months. We provide estimated timelines during the project consultation phase.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFAQ(this)" itemprop="name">Do you offer website maintenance and support?</div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, we offer comprehensive website maintenance and support packages to ensure your website remains secure, up-to-date, and performing optimally. Our maintenance services include security updates, content updates, performance monitoring, and technical support.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFAQ(this)" itemprop="name">What is your process for web development projects?</div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Our web development process typically involves several stages: consultation, planning, design, development, testing, deployment, and ongoing maintenance. We work closely with our clients throughout each stage to ensure their vision is realized and their goals are met.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" onclick="toggleFAQ(this)" itemprop="name">How much does web development cost?</div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">The cost of web development depends on various factors such as website complexity, features, design requirements, and ongoing maintenance. We provide custom quotes based on project scope. Please contact us for a free consultation and quote.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Logos Section -->
+        <section class="clients-section section-padding">
+            <div class="container">
+                <h2>Trusted by Leading Brands</h2>
+                <p class="text-center mb-4">We are proud to have partnered with these and many other leading brands to deliver exceptional web solutions.</p>
+                <div class="client-logos">
+                    <img src="client-logo-1.png" alt="Client Logo 1" class="client-logo" onerror="this.src='https://via.placeholder.com/150x80?text=Client+1'">
+                    <img src="client-logo-2.png" alt="Client Logo 2" class="client-logo" onerror="this.src='https://via.placeholder.com/150x80?text=Client+2'">
+                    <img src="client-logo-3.png" alt="Client Logo 3" class="client-logo" onerror="this.src='https://via.placeholder.com/150x80?text=Client+3'">
+                    <img src="client-logo-4.png" alt="Client Logo 4" class="client-logo" onerror="this.src='https://via.placeholder.com/150x80?text=Client+4'">
+                    <img src="client-logo-5.png" alt="Client Logo 5" class="client-logo" onerror="this.src='https://via.placeholder.com/150x80?text=Client+5'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content container">
+                <h2>Ready to Transform Your Web Presence?</h2>
+                <p>Let's discuss your project and discover how WebCrafters can help you achieve your digital ambitions. Contact us today for a free consultation and take the first step towards online success.</p>
+                <a href="contact.html" class="cta-action-button">Get Started Now</a>
+            </div>
+        </section>
+
+        <!-- Blog Section (Simulated - Meta Description Example) -->
+        <section id="blog" class="blog-section section-padding">
+            <!-- Example Meta Description for Blog -->
+            <meta name="description" content="WebCrafters Blog - Insights and articles on web development, digital marketing, SEO tips, and industry trends. Stay updated with the latest in web technologies and digital strategies.">
+            <div class="container">
+                <h2>Latest from Our Blog</h2>
+                <p>Explore our blog for insights, tips, and articles on web development, digital marketing, SEO, and more. Stay informed and enhance your digital knowledge.</p>
+                <!-- Blog Posts would go here - Example structure -->
+                <article>
+                    <h3><a href="#blog-post-1">10 Essential Web Design Trends for 2024</a></h3> <!-- Example Blog Post Title - H3 for hierarchy -->
+                    <p>Discover the top web design trends that will shape the digital landscape in 2024. From minimalist design to immersive experiences, learn how to stay ahead of the curve.</p>
+                    <a href="#blog-post-1">Read More</a>
+                </article>
+                <article>
+                    <h3><a href="#blog-post-2">Boost Your SEO with These Proven Strategies</a></h3> <!-- Example Blog Post Title - H3 for hierarchy -->
+                    <p>Improve your website's search engine ranking with our proven SEO strategies. Learn about keyword research, on-page optimization, and link building techniques.</p>
+                    <a href="#blog-post-2">Read More</a>
+                </article>
+                <!-- More blog posts -->
+                <p><a href="#all-blog-posts">View All Blog Posts</a></p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- About WebCrafters Footer Section -->
+                <div class="footer-section footer-about">
+                    <h3>About WebCrafters</h3>
+                    <p>WebCrafters is a premier web development agency dedicated to providing innovative and effective web solutions for businesses of all sizes. With a focus on quality, creativity, and client satisfaction, we craft websites and applications that drive results and elevate brands in the digital world.</p>
+                    <p>Our team of experienced developers, designers, and digital marketers is committed to delivering excellence in every project. We combine technical expertise with creative vision to build solutions that are not only visually stunning but also strategically aligned with our clients' business objectives. Since 2010, we have been helping businesses thrive online, and we are ready to help you too.</p>
+                </div>
+                <!-- Quick Links Footer Section -->
+                <div class="footer-section footer-navigation">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="#blog">Blog</a></li> <!-- Link to the Blog section -->
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <!-- Connect With Us Footer Section -->
+                <div class="footer-section footer-social-links">
+                    <h3>Connect With Us</h3>
+                    <ul>
+                        <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube-square"></i></a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information Footer Section -->
+                <div class="footer-section footer-contact-details">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> 123 Web Development Street, Tech City, State, 12345</p>
+                    <p><strong>Phone:</strong> <a href="tel:+15551234567">+1-555-123-4567</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@webcrafters.com">info@webcrafters.com</a></p>
+                    <p><strong>Business Hours:</strong> Monday - Friday, 9am - 6pm (EST)</p>
+                    <!-- Newsletter Subscription Form -->
+                    <div class="footer-newsletter">
+                        <form action="#" method="post">
+                            <label for="newsletterEmail" class="visually-hidden">Newsletter Email</label>
+                            <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright and Legal Links Footer Section -->
+            <p class="copyright">© 2023 WebCrafters. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="accessibility.html">Accessibility Statement</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth Scroll Functionality for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (this.getAttribute('href') !== '#') {
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion Functionality
+        function toggleFAQ(questionElement) {
+            const faqItem = questionElement.parentNode;
+            const answerElement = questionElement.nextElementSibling;
+            questionElement.classList.toggle('active');
+            answerElement.classList.toggle('active');
+
+            if (answerElement.classList.contains('active')) {
+                answerElement.style.maxHeight = answerElement.scrollHeight + "px";
+            } else {
+                answerElement.style.maxHeight = null; // Or 0 if you want to animate to 0 height
+            }
+        }
+
+        // Initialize FAQ accordions (optional - if you want to close all answers by default on page load)
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.nextElementSibling.style.maxHeight = null; // Close all answers initially
+            });
+        });
+
+    </script>
+    <!-- Font Awesome Icons (for social media icons in footer - include in <head> for production) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
